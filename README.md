@@ -1,7 +1,12 @@
 Architecture starter template (multi-module)
 ==================
 
-This template is compatible with the latest **stable** version of Android Studio.
+This template is compatible with the latest **stable** version of Android Studio and based on [android architecture templates](https://github.com/android/architecture-templates).
+
+What's the difference?
+* Move core modules under /core directory.
+* Move feature module under /feature directory.
+* Add convention plugins to remove boilerplate code in build files.
 
 ![Screenshot](https://github.com/android/architecture-templates/raw/main/screenshots.png)
 
