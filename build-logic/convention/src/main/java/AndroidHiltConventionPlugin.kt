@@ -9,19 +9,18 @@ class AndroidHiltConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("dagger.hilt.android.plugin")
-                apply("org.jetbrains.kotlin.kapt")
+                apply("com.google.devtools.ksp")
             }
 
-            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
-                "implementation"(libs.findLibrary("hilt.android").get())
-                "kapt"(libs.findLibrary("hilt.compiler").get())
+                "implementation"(vcLibs.findLibrary("hilt.android").get())
+                "ksp"(vcLibs.findLibrary("hilt.compiler").get())
                 // Hilt and instrumented tests.
-                "androidTestImplementation"(libs.findLibrary("hilt.android.testing").get())
-                "kaptAndroidTest"(libs.findLibrary("hilt.android.compiler").get())
+                "androidTestImplementation"(vcLibs.findLibrary("hilt.android.testing").get())
+                "kspAndroidTest"(vcLibs.findLibrary("hilt.android.compiler").get())
                 // Hilt and Robolectric tests.
-                "testImplementation"(libs.findLibrary("hilt.android.testing").get())
-                "kaptTest"(libs.findLibrary("hilt.android.compiler").get())
+                "testImplementation"(vcLibs.findLibrary("hilt.android.testing").get())
+                "kspTest"(vcLibs.findLibrary("hilt.android.compiler").get())
             }
         }
     }

@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "android.template"
-    compileSdk = 33
+    compileSdk = vcLibs.compileSdk
 
     defaultConfig {
         applicationId = "android.template"
-        minSdk = 23
-        targetSdk = 33
+        minSdk = vcLibs.minSdk
+        targetSdk = vcLibs.targetsdk
         versionCode = 1
         versionName = "1.0"
 
@@ -37,7 +37,7 @@ android {
         }
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }

@@ -1,5 +1,5 @@
-import com.android.build.gradle.TestExtension
 import android.template.configureKotlinAndroid
+import com.android.build.gradle.TestExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -18,5 +18,4 @@ class AndroidTestConventionPlugin : Plugin<Project> {
             }
         }
     }
-
 }
