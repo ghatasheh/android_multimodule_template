@@ -13,5 +13,3 @@ plugins {
     alias(libs.plugins.hilt.gradle) apply false
     alias(libs.plugins.ksp) apply false
 }
-
-println("workaround: Expecting an expression")
