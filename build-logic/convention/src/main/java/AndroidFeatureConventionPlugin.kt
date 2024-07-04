@@ -27,6 +27,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("androidTestImplementation", kotlin("test"))
 
                 add("implementation", libs.findLibrary("androidx.lifecycle.runtime.ktx").get())
+                add("implementation", libs.findLibrary("androidx.lifecycle.runtime.compose").get())
 
                 add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
             }
